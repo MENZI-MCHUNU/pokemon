@@ -1,12 +1,11 @@
+import Header from "./components/Header";
+import SideNavigation from "./components/SideNavigation";
+
 function App() {
   return (
-    <>
-      <div>
-        <h1 className="text-3xl font-bold underline bg-red-500">
-          Hello React{" "}
-        </h1>
-      </div>
-    </>
+    <main className="">
+      <SideNavigation />
+    </main>
   );
 }
 
