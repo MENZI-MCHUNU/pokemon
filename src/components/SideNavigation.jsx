@@ -2,7 +2,7 @@ import React from "react";
 import { first151Pokemon, getFullPokedexNumber } from "../utils";
 function SideNavigation() {
   return (
-    <nav className="p-4 pt-0 overflow-y-auto flex flex-col items-start gap-1 h-[100vh] top-0 left-0 w-[100vw] z-10 bg-white scrollbar-thin scrollbar-thumb-teal-500 scrollbar-track-teal-200">
+    <nav className="p-4 pt-0 overflow-y-auto flex flex-col items-start gap-1 h-[100vh] top-0 left-0 w-[20vw] z-10 bg-white scrollbar-thin scrollbar-thumb-teal-500 scrollbar-track-teal-200">
       <div className="flex items-center gap-4 p-4 pb-0">
         <h1 className="pb-2 text-lg leading-10">Pokedex</h1>
       </div>
@@ -14,7 +14,10 @@ function SideNavigation() {
       />
       {first151Pokemon.map((pokemon, pokemonIndex) => {
         return (
-          <button className="justify-center items-center px-7 py-4 border text-lg leading-none bg-blue-700 border-blue-900 rounded-full cursor-pointer border-none flex gap-2 p-0 hover:translate-0">
+          <button
+            key={pokemonIndex}
+            className="justify-center items-center px-7 py-4 border text-lg leading-none bg-blue-700 border-blue-900 rounded-full cursor-pointer border-none flex gap-2 p-0 hover:translate-0"
+          >
             <p>{getFullPokedexNumber(pokemonIndex)}</p>
             <p>{pokemon}</p>
           </button>
