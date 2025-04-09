@@ -7,6 +7,7 @@ function App() {
 
   return (
     <main>
+      {/*<Header />*/}
       <div className="flex">
         <SideNavigation
           selectedPokemon={selectedPokemon}
